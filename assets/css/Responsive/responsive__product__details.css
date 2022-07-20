@@ -18,4 +18,14 @@
     .product-detail__info{
         margin-top: calc(var(--header-with-search-height) + var(--sort-bar-height));
     }
+    .product-detail__attribute-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-detail__attribute-item{
+        margin-top: 10px;
+    }
+    .product-detail__attribute-btn{
+        min-width: 10rem;
+    }
 }
