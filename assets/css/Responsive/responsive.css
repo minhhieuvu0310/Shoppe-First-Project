@@ -1,3 +1,5 @@
+@import url(./responsive__product__details.css);
+@import url(./responsive_cart.css);
 /*Mobile and Tablet*/
 @media (max-width:1023px) {
     :root {
