@@ -21,7 +21,7 @@
     margin-right: 10px;
 }
 
-.home-filter__btn {
+.btn.home-filter__btn {
     padding: 0 15px;
     margin: 0 5px;
     min-width: 0;

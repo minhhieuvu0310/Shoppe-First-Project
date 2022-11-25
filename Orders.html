@@ -2,43 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giỏ Hàng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
     <!-- *Begin Header  -->
     <!-- Header -->
-    <link rel="stylesheet" href="./assets/css/Header/Header.css">
+    <link rel="stylesheet" href="./assets/css/Header/Header.css" />
     <!-- *End Header -->
 
     <!-- *Begin Cart -->
-    <link rel="stylesheet" href="./assets/css/cart/cart.css">
+    <link rel="stylesheet" href="./assets/css/Orders/Orders.css"/>
     <!-- *End Cart -->
 
     <!-- *Begin Footer -->
-    <link rel="stylesheet" href="./assets/css/Footer/footer.css">
+    <link rel="stylesheet" href="./assets/css/Footer/footer.css" />
     <!-- *End Footer -->
 
     <!-- Responsive -->
-    <link rel="stylesheet" href="./assets/css/Responsive/responsive.css">
-    <style>
-        .cart__product-detail__details {
-            border-bottom: 1px solid rgba(0, 0, 0, .09);
-        }
-
-        .cart__product-detail__details:last-child {
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/Responsive/responsive.css" />
 </head>
 
 <body>
-    <div class="app" style="overflow: hidden;">
+    <div class="app" style="overflow: hidden">
         <!-- *Begin Header -->
         <header class="header">
             <div class="grid wide">
@@ -407,104 +398,151 @@
         <!-- *End Header -->
 
         <!-- *Begin Cart -->
-        <div class="cart-container">
+        <div class="cart-container ">
             <div class="grid wide">
-                <form action="updateCart" method="post">
-                    <div class="row sm-gutter row-bg cart-lable">
-                        <div class="col l-12 m-12 c-12">
-                            <ul class="cart-lable-list hiden-on-mobile">
-                                <li class="cart-lable-item item--product">Sản phẩm</li>
-                                <li class="cart-lable-item item--price">Đơn giá</li>
-                                <li class="cart-lable-item item--quantity">Số lượng</li>
-                                <li class="cart-lable-item item--total-money">Số tiền</li>
-                                <li class="cart-lable-item item--manipulation">Thao tác</li>
-                            </ul>
+                <div class="row  sm-gutter myAccount">
+                    <div class="col l-2 m-12 c-12">
+                        <div class="myAccount-info">
+                            <img src="./assets/img/user/user.png" alt="NoImage" class="myAccount-info__avatar" />
+                            <div class="myAccount-info__name">
+                                <p>minhhieu0310</p>
+                                <a href="#" class="editprofile">
+                                    <i class="fa-solid fa-pen editprofile__icon"></i>
+                                    <span class="editprofile__title">Sửa Hồ Sơ</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row sm-gutter row-bg cart__product-detail">
-                        <div class="col l-12 m-12 c-12">
-                            <div class="cart__shop">
-                                <span class="cart__shop-favourite">Yêu Thích</span>
-                                <div class="cart__shop-name">NewShop</div>
-                                <i class="cart__shop-icon-mess fa-solid fa-message"></i>
+                    <div class="col l-10 m-12 c-12">
+                        <div class="MyOrders">
+                            <div class="MyOrders__menubar">
+                                <ul class="menubar-list">
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">Tất cả</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">chờ xác nhận</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">Chờ lấy hàng</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">Đang giao</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">Đã giao</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">Đã hủy</a>
+                                    </li>
+                                    <li class="menubar-items">
+                                        <a href="#" class="menubar-items__links">trả hàng/hoàn tiền</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="cart__product-detail__details">
-                                <div class="cart__product-info item--product">
-                                    <a href="" class="cart__product-link">
-                                        <div class="cart__product-img"
-                                            style="background-image: url(./assets/img/buy/1.jpg);"></div>
-                                    </a>
-                                    <div class="cart__product-name-classify">
-                                        <div class="cart__product-name">
-                                            <a href="" style="color:rgba(0,0,0,.87); text-decoration: none;">
-                                                Laptop Gaming Acer Nitro 5 Tiger AN515-58-52SP/ i5-12500H/8GB/512GB/4GB RTX3050/144Hz</a>
-                                        </div>
-                                        <div class="cart__product-classify">
-                                            <div class="cart__product-classify-lable">
-                                                Phân loại hàng:
-                                                <i class="product-classify-icon fa-solid fa-caret-down"></i>
+                            <div class="MyOrders__Search">
+                                <svg width="19px" height="19px" viewBox="0 0 19 19"><g id="Search-New" stroke-width="1" fill="none" fill-rule="evenodd"><g id="my-purchase-copy-27" transform="translate(-399.000000, -221.000000)" stroke-width="2"><g id="Group-32" transform="translate(400.000000, 222.000000)"><circle id="Oval-27" cx="7" cy="7" r="7"></circle><path d="M12,12 L16.9799555,16.919354" id="Path-184" stroke-linecap="round" stroke-linejoin="round"></path></g></g></g></svg>
+                                <input type="text" placeholder="Tìm kiếm theo Tên Shop, ID đơn hàng hoặc Tên Sản phẩm" class="MyOrders__Search-input">
+                            </div>
+                            <div class="MyOrders__group">
+                                <ul class="MyOrders__list">
+                                    <li class="MyOrders__items">
+                                        <div class="MyOrders__items-container">
+                                            <div class="MyOrders__items-header">
+                                                <div class="MyOrders__logoshop">
+                                                    <span class="MyOrders__favorite">Yêu thích</span>
+                                                    <p class="MyOrders__shopname">HieuComputer</p>
+                                                </div>
+                                                <div class="MyOrders__status">
+                                                    <div class="MyOrders__status-title">
+                                                        <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopiconship"><g><line fill="none" stroke-linejoin="round" stroke-miterlimit="10" x1="8.6" x2="4.2" y1="9.8" y2="9.8"></line><circle cx="3" cy="11.2" fill="none" r="2" stroke-miterlimit="10"></circle><circle cx="10" cy="11.2" fill="none" r="2" stroke-miterlimit="10"></circle><line fill="none" stroke-miterlimit="10" x1="10.5" x2="14.4" y1="7.3" y2="7.3"></line><polyline fill="none" points="1.5 9.8 .5 9.8 .5 1.8 10 1.8 10 9.1" stroke-linejoin="round" stroke-miterlimit="10"></polyline><polyline fill="none" points="9.9 3.8 14 3.8 14.5 10.2 11.9 10.2" stroke-linejoin="round" stroke-miterlimit="10"></polyline></g></svg>
+                                                        Đã giao hàng thành công
+                                                    </div>
+                                                    <div class="MyOrders__status-content">Đã Giao</div>
+                                                </div>
                                             </div>
-                                            <div class="cart__product-classify-name">Red</div>
+                                            <div class="MyOrders__items-content">
+                                                <ul class="MyOrders__orderlist">
+                                                    <li class="MyOrder__orderitem">
+                                                        <img src="./assets/img/buy/1.jpg" alt="" class="MyOrder__orderitem-img">
+                                                        <div class="MyOrder__orderitem-product-description">
+                                                            <div class="MyOrder__orderitem-product-name">Laptop Gaming Acer Nitro 5 Tiger AN515-58-52SP/ i5-12500H/8GB/512GB/4GB RTX3050/144Hz</div>
+                                                            <div class="MyOrder__orderitem-classify">Phân Loại Hàng : Đen</div>
+                                                            <div class="MyOrder__orderitem-quantity">x10</div>
+                                                        </div>
+                                                        <div class="MyOrder__orderitem-price">
+                                                            <div class="MyOrder__orderitem-oldprice">50.000.000</div>
+                                                            <div class="MyOrder__orderitem-newprice">40.000.000</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="cart__product-price item--price">
-                                    <div class="cart__product-price-old">1.600.000đ</div>
-                                    <div class="cart__product-price-new">979.000đ</div>
-                                </div>
-                                <div class="cart__product-quantity item--quantity">
-                                    <p class="cart__product-quantity-btn btn--subQuantity"
-                                        style="display: flex; align-items: center; justify-content: center;">
-                                        <i class="cart__product-quantity-icon fa-solid fa-minus"></i>
-                                    </p>
-                                    <input type="hidden" name="maxQuantity" class="maxQuantity" value="300">
-                                    <input type="hidden" name="priceOutput" class="priceOutput" value="1000000">
-                                    <input type="text" class="cart__product-quantity-value-input" value="1"
-                                        name="quantity">
-                                    <p class="cart__product-quantity-btn btn--addQuantity"
-                                        style="display: flex; align-items: center; justify-content: center;">
-                                        <i class="cart__product-quantity-icon fa-solid fa-plus"></i>
-                                    </p>
-                                </div>
-                                <div
-                                    class="cart__product-total-money item--total-money hiden-on-mobile totalmoneyProductitems">
-                                    979.000đ
-                                </div>
-                                <ul class="cart__product-manipulation-list item--manipulation hiden-on-mobile">
-                                    <li class="cart__product-manipulation-item manipulation-item--remove">
-                                        <a href="" class="cart-link--remove" style="text-decoration: none;">Xóa</a>
+                                        <div class="MyOrders__items-footer">
+                                            <div class="MyOrders__items-totalmoney">
+                                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/pdp/83e10a1f95cb083579c089448ef8dd3b.png" alt="NoImage" class="MyOrders__shop-img">
+                                                <p class="MyOrders__items-totalmoney-title">Tổng Số Tiền:</p>
+                                                <p class="MyOrders__items-totalmoney-content">80.000.000đ</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="MyOrders__items">
+                                        <div class="MyOrders__items-container">
+                                            <div class="MyOrders__items-header">
+                                                <div class="MyOrders__logoshop">
+                                                    <span class="MyOrders__favorite">Yêu thích</span>
+                                                    <p class="MyOrders__shopname">HieuComputer</p>
+                                                </div>
+                                                <div class="MyOrders__status">
+                                                    <div class="MyOrders__status-title">
+                                                        <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopiconship"><g><line fill="none" stroke-linejoin="round" stroke-miterlimit="10" x1="8.6" x2="4.2" y1="9.8" y2="9.8"></line><circle cx="3" cy="11.2" fill="none" r="2" stroke-miterlimit="10"></circle><circle cx="10" cy="11.2" fill="none" r="2" stroke-miterlimit="10"></circle><line fill="none" stroke-miterlimit="10" x1="10.5" x2="14.4" y1="7.3" y2="7.3"></line><polyline fill="none" points="1.5 9.8 .5 9.8 .5 1.8 10 1.8 10 9.1" stroke-linejoin="round" stroke-miterlimit="10"></polyline><polyline fill="none" points="9.9 3.8 14 3.8 14.5 10.2 11.9 10.2" stroke-linejoin="round" stroke-miterlimit="10"></polyline></g></svg>
+                                                        Đã giao hàng thành công
+                                                    </div>
+                                                    <div class="MyOrders__status-content">Đã Giao</div>
+                                                </div>
+                                            </div>
+                                            <div class="MyOrders__items-content">
+                                                <ul class="MyOrders__orderlist">
+                                                    <li class="MyOrder__orderitem">
+                                                        <img src="./assets/img/buy/1.jpg" alt="" class="MyOrder__orderitem-img">
+                                                        <div class="MyOrder__orderitem-product-description">
+                                                            <div class="MyOrder__orderitem-product-name">Laptop Gaming Acer Nitro 5 Tiger AN515-58-52SP/ i5-12500H/8GB/512GB/4GB RTX3050/144Hz</div>
+                                                            <div class="MyOrder__orderitem-classify">Phân Loại Hàng : Đen</div>
+                                                            <div class="MyOrder__orderitem-quantity">x10</div>
+                                                        </div>
+                                                        <div class="MyOrder__orderitem-price">
+                                                            <div class="MyOrder__orderitem-oldprice">50.000.000</div>
+                                                            <div class="MyOrder__orderitem-newprice">40.000.000</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="MyOrder__orderitem">
+                                                        <img src="./assets/img/buy/1.jpg" alt="" class="MyOrder__orderitem-img">
+                                                        <div class="MyOrder__orderitem-product-description">
+                                                            <div class="MyOrder__orderitem-product-name">Laptop Gaming Acer Nitro 5 Tiger AN515-58-52SP/ i5-12500H/8GB/512GB/4GB RTX3050/144Hz</div>
+                                                            <div class="MyOrder__orderitem-classify">Phân Loại Hàng : Đen</div>
+                                                            <div class="MyOrder__orderitem-quantity">x10</div>
+                                                        </div>
+                                                        <div class="MyOrder__orderitem-price">
+                                                            <div class="MyOrder__orderitem-oldprice">50.000.000</div>
+                                                            <div class="MyOrder__orderitem-newprice">40.000.000</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="MyOrders__items-footer">
+                                            <div class="MyOrders__items-totalmoney">
+                                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/pdp/83e10a1f95cb083579c089448ef8dd3b.png" alt="NoImage" class="MyOrders__shop-img">
+                                                <p class="MyOrders__items-totalmoney-title">Tổng Số Tiền:</p>
+                                                <p class="MyOrders__items-totalmoney-content">80.000.000đ</p>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="row sm-gutter row-bg">
-                        <div class="col l-12 m-12 c-12">
-                            <div class="PayandUpdateCart hiden-on-mobile-tablet">
-                                <div class="shop__voucher">
-                                    <div class="shop__voucher-label">
-                                        <svg fill="none" viewBox="0 -2 23 22" class="shop__voucher-icon"><g filter="url(#voucher-filter0_d)"><mask id="a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2h18v2.32a1.5 1.5 0 000 2.75v.65a1.5 1.5 0 000 2.75v.65a1.5 1.5 0 000 2.75V16H1v-2.12a1.5 1.5 0 000-2.75v-.65a1.5 1.5 0 000-2.75v-.65a1.5 1.5 0 000-2.75V2z"></path></mask><path d="M19 2h1V1h-1v1zM1 2V1H0v1h1zm18 2.32l.4.92.6-.26v-.66h-1zm0 2.75h1v-.65l-.6-.26-.4.91zm0 .65l.4.92.6-.26v-.66h-1zm0 2.75h1v-.65l-.6-.26-.4.91zm0 .65l.4.92.6-.26v-.66h-1zm0 2.75h1v-.65l-.6-.26-.4.91zM19 16v1h1v-1h-1zM1 16H0v1h1v-1zm0-2.12l-.4-.92-.6.26v.66h1zm0-2.75H0v.65l.6.26.4-.91zm0-.65l-.4-.92-.6.26v.66h1zm0-2.75H0v.65l.6.26.4-.91zm0-.65l-.4-.92-.6.26v.66h1zm0-2.75H0v.65l.6.26.4-.91zM19 1H1v2h18V1zm1 3.32V2h-2v2.32h2zm-.9 1.38c0-.2.12-.38.3-.46l-.8-1.83a2.5 2.5 0 00-1.5 2.29h2zm.3.46a.5.5 0 01-.3-.46h-2c0 1.03.62 1.9 1.5 2.3l.8-1.84zm.6 1.56v-.65h-2v.65h2zm-.9 1.38c0-.2.12-.38.3-.46l-.8-1.83a2.5 2.5 0 00-1.5 2.29h2zm.3.46a.5.5 0 01-.3-.46h-2c0 1.03.62 1.9 1.5 2.3l.8-1.84zm.6 1.56v-.65h-2v.65h2zm-.9 1.38c0-.2.12-.38.3-.46l-.8-1.83a2.5 2.5 0 00-1.5 2.29h2zm.3.46a.5.5 0 01-.3-.46h-2c0 1.03.62 1.9 1.5 2.3l.8-1.84zM20 16v-2.13h-2V16h2zM1 17h18v-2H1v2zm-1-3.12V16h2v-2.12H0zm1.4.91a2.5 2.5 0 001.5-2.29h-2a.5.5 0 01-.3.46l.8 1.83zm1.5-2.29a2.5 2.5 0 00-1.5-2.3l-.8 1.84c.18.08.3.26.3.46h2zM0 10.48v.65h2v-.65H0zM.9 9.1a.5.5 0 01-.3.46l.8 1.83A2.5 2.5 0 002.9 9.1h-2zm-.3-.46c.18.08.3.26.3.46h2a2.5 2.5 0 00-1.5-2.3L.6 8.65zM0 7.08v.65h2v-.65H0zM.9 5.7a.5.5 0 01-.3.46l.8 1.83A2.5 2.5 0 002.9 5.7h-2zm-.3-.46c.18.08.3.26.3.46h2a2.5 2.5 0 00-1.5-2.3L.6 5.25zM0 2v2.33h2V2H0z" mask="url(#a)"></path></g><path clip-rule="evenodd" d="M6.49 14.18h.86v-1.6h-.86v1.6zM6.49 11.18h.86v-1.6h-.86v1.6zM6.49 8.18h.86v-1.6h-.86v1.6zM6.49 5.18h.86v-1.6h-.86v1.6z"></path><defs><filter id="voucher-filter0_d" x="0" y="1" width="20" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation=".5"></feGaussianBlur><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend></filter></defs></svg>
-                                        <span class="shop__voucher-text">Shop Voucher</span>
-                                    </div>
-                                    <a href="#" class="shop__voucher-link">Chọn Hoặc Nhập Mã</a>
-                                </div>
-                                <div class="shop__makepay">
-                                    <div class="PayandUpdateCart__UpdateorBuy">
-                                        <button type="submit" class="btn btn--primary btnCart--Update">Cập Nhật</button>
-                                        <a href="Index.html" class="btn btnCart--buy">Tiếp tục mua hàng</a>
-                                    </div>
-                                    <div class="PayandUpdateCart__btn">
-                                        <div class="totalmoney">
-                                            <h3 class="totalmoney__title">Tổng cộng</h3>
-                                            <p class="total">Tạm tính : <span class="money">560.000đ</span></p>
-                                        </div>
-                                        <a href="CheckOut1.html" class="btn btn--primary btnCart--pay">Tiến Hành Thanh Toán</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
         <!-- *End Cart -->
@@ -588,26 +626,26 @@
                             <div class="">
                                 <h3 class="footer-heading">THANH TOÁN</h3>
                                 <div class="footer-sale-ship">
-                                    <img src="./assets/img/pay/1.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/pay/2.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/pay/3.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/pay/4.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/pay/5.PNG" alt="" class="footer-sale-ship__img">
+                                    <img src="./assets/img/pay/1.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/pay/2.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/pay/3.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/pay/4.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/pay/5.PNG" alt="" class="footer-sale-ship__img" />
                                 </div>
                             </div>
 
                             <div class="">
                                 <h3 class="footer-heading">ĐƠN VỊ VẬN CHUYỂN</h3>
                                 <div class="footer-sale-ship">
-                                    <img src="./assets/img/ship/1.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/2.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/3.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/4.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/5.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/6.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/7.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/8.PNG" alt="" class="footer-sale-ship__img">
-                                    <img src="./assets/img/ship/9.PNG" alt="" class="footer-sale-ship__img">
+                                    <img src="./assets/img/ship/1.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/2.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/3.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/4.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/5.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/6.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/7.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/8.PNG" alt="" class="footer-sale-ship__img" />
+                                    <img src="./assets/img/ship/9.PNG" alt="" class="footer-sale-ship__img" />
                                 </div>
                             </div>
                         </div>
@@ -632,28 +670,28 @@
                                         LinkedIn
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                         <div class="col l-2-4 m-8 c-6">
                             <h3 class="footer-heading">TẢI ỨNG DỤNG SHOPEE</h3>
                             <div class="footer-dowload">
                                 <a href="" class="footer-dowload-link">
-                                    <img src="./assets/img/qr/qr-code.png" alt="" class="footer-dowload-qr__img">
+                                    <img src="./assets/img/qr/qr-code.png" alt="" class="footer-dowload-qr__img" />
                                 </a>
                                 <div class="footer-dowload-app">
                                     <a href="" class="footer-dowload-link">
-                                        <img src="./assets/img/qr/gg-play.png" alt="" class="footer-dowload-app__img">
+                                        <img src="./assets/img/qr/gg-play.png" alt="" class="footer-dowload-app__img" />
                                     </a>
                                     <a href="" class="footer-dowload-link">
-                                        <img src="./assets/img/qr/app-store.png" alt="" class="footer-dowload-app__img">
+                                        <img src="./assets/img/qr/app-store.png" alt=""
+                                            class="footer-dowload-app__img" />
                                     </a>
                                     <a href="" class="footer-dowload-link">
                                         <img src="./assets/img/qr/app-gallery.png" alt=""
-                                            class="footer-dowload-app__img">
+                                            class="footer-dowload-app__img" />
                                     </a>
                                     <a href="" class="footer-dowload-link">
-                                        <img src="./assets/img/qr/ltp-img.png" alt="" class="footer-dowload-app__img">
+                                        <img src="./assets/img/qr/ltp-img.png" alt="" class="footer-dowload-app__img" />
                                     </a>
                                 </div>
                             </div>
